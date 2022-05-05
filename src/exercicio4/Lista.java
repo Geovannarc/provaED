@@ -25,15 +25,16 @@ public class Lista {
 					novo.esq = fim;
 					fim = novo;
 				}else{
-					do {
-						if(novo.dado > aux.dado && novo.dado < aux.dir.dado) {
-							aux.esq = aux;
-							aux.dir.esq = aux;
-							aux.dir = aux;
+					while(aux != null){
+						if(novo.dado > aux.dado) {
+							novo.esq = aux;
+							novo.dir = aux.dir;
+							aux.dir.esq = novo;
+							aux.dir = novo;
 							break;
 						}
 						aux = aux.dir;
-					} while(aux != null);
+					}
 				}
 			}
 		}
@@ -41,10 +42,10 @@ public class Lista {
 	
 	// m�todo para imprimir os elementos da lista
 	public void imprimir() {
-		No aux2 = inicio;
-		while(aux2 != null) {
-			System.out.println(aux2.dado);
-			aux2 = aux2.dir;
+		No aux = inicio;
+		while(aux != null) {
+			System.out.println(aux.dado);
+			aux = aux.dir;
 		}
 	}
 }

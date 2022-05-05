@@ -5,14 +5,18 @@ public class Main {
 		
 		Lista lista = new Lista();
 		
-		// inserção dos elementos na lista
+		// inserï¿½ï¿½o dos elementos na lista
 		lista.inserir(10);
+		lista.imprimir();
 		lista.inserir(25);
+		lista.imprimir();
 		lista.inserir(15);
+		lista.imprimir();
 		lista.inserir(-3);
+		lista.imprimir();
 		lista.inserir(0);
 		
-		// impressão dos elementos da lista
+		// impressï¿½o dos elementos da lista
 		lista.imprimir();
 
 	}
